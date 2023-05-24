@@ -3,13 +3,12 @@ import {
     OrbitControls,
     PerspectiveCamera,
 } from "@react-three/drei";
-import { Canvas, useLoader } from "@react-three/fiber";
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
+import { Canvas } from "@react-three/fiber";
 import { Model } from "../../util/Model";
 
 export function CanvasComponent() {
     return (
-        <div id="canvas-container">
+        <div className="h-[500px] w-3/4 m-auto border-gray-400 border-[10px] rounded-md cursor-grab active:cursor-grabbing">
             <Canvas camera={{ position: [22, 18, 30], fov: 20 }}>
                 <Model file="luxury-hotel" />
                 <Environment
